@@ -5,8 +5,8 @@ import styles from './JokerCard.module.css';
 export const JokerCard = ({ joker }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const cleanPath = joker.image.replace(/\\/g, '/').replace(/^\//, '');
-const imagePath = `public/${cleanPath}`;
+const cleanPath = joker.image.replace(/\\/g, '/').replace(/^\//, '');
+const imagePath = `${import.meta.env.BASE_URL}${cleanPath}`;
 
   const rarityStyles = {
     Common: { bg: "#4987ba", stroke: "#2d5a7d" },
